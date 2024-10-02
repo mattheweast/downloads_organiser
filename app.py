@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import shutil
 
 # File types
@@ -14,7 +15,8 @@ categories = {
 }
 
 # Assigning the root download folder
-download_root = r"/Users/matteast/Downloads"
+home_dir = Path.home()
+download_root = home_dir / "Downloads"
 
 # Creation of folders for each category
 for category in categories:
