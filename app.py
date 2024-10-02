@@ -1,0 +1,34 @@
+import os
+import shutil
+
+# File types
+categories = {
+    "Audio": ['.aif', '.cda', '.mid', '.midi', '.mp3', '.mpa', '.ogg', '.wav', '.wma'],
+    "Compressed": ['.7z', '.deb', '.pkg', '.rar', '.rpm', '.tar.gz', '.z', '.zip'],
+    "Code": ['.js', '.jsp', '.html', '.ipynb', '.py', '.java', '.css'],
+    "Documents": ['.ppt', '.pptx', '.pdf', '.xls', '.xlsx', '.doc', '.docx', '.txt', '.tex', '.epub'],
+    "Images": ['.bmp', '.gif', '.ico', '.jpeg', '.jpg', '.png', '.jfif', '.svg', '.tif', '.tiff'],
+    "Software": ['.apk', '.bat', '.bin', '.exe', '.jar', '.msi', '.py'],
+    "Videos": ['.3gp', '.avi', '.flv', '.h264', '.mkv', '.mov', '.mp4', '.mpg', '.mpeg', '.wmv'],
+    "Other": []
+}
+
+# Assigning the root download folder
+download_root = r"/Users/matteast/Downloads"
+
+# Creation of folders for each category
+for category in categories:
+    os.makedirs(os.path.join(download_root, category), exist_ok=True)
+
+# Organise files into the correct folder
+for file in os.listdir(download_root):
+    file_path = os.path.join(download_root, file)
+    if os.path.isfile(file_path):
+        ext = os.path.splitext(file)[1].lower()
+        destination = "Other"
+        for category, extensions in categories.items():
+            if ext in extensions:
+                destination = category
+                break
+
+        shutil.move(file_path, os.path.join(download_root, destination, file))
