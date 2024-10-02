@@ -9,7 +9,7 @@ categories = {
     "Code": ['.js', '.jsp', '.html', '.ipynb', '.py', '.java', '.css'],
     "Documents": ['.ppt', '.pptx', '.pdf', '.xls', '.xlsx', '.doc', '.docx', '.txt', '.tex', '.epub'],
     "Images": ['.bmp', '.gif', '.ico', '.jpeg', '.jpg', '.png', '.jfif', '.svg', '.tif', '.tiff'],
-    "Software": ['.apk', '.bat', '.bin', '.exe', '.jar', '.msi', '.py'],
+    "Software": ['.apk', '.bat', '.bin', '.exe', '.jar', '.msi', '.py', 'installer'],
     "Videos": ['.3gp', '.avi', '.flv', '.h264', '.mkv', '.mov', '.mp4', '.mpg', '.mpeg', '.wmv'],
     "Other": []
 }
@@ -28,9 +28,11 @@ for file in os.listdir(download_root):
     if os.path.isfile(file_path):
         ext = os.path.splitext(file)[1].lower()
         destination = "Other"
+
         for category, extensions in categories.items():
             if ext in extensions:
                 destination = category
                 break
+        file_moved = False
 
         shutil.move(file_path, os.path.join(download_root, destination, file))
