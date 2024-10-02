@@ -1,4 +1,6 @@
-# This is the MVP of my file organiser program.
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
 
 import os
 from pathlib import Path
