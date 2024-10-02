@@ -1,3 +1,5 @@
+# This is the MVP of my file organiser program.
+
 import os
 from pathlib import Path
 import shutil
