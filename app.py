@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import shutil
 
-# File types
+# File types categorised by extensions
 categories = {
     "Audio": ['.aif', '.cda', '.mid', '.midi', '.mp3', '.mpa', '.ogg', '.wav', '.wma'],
     "Compressed": ['.7z', '.deb', '.pkg', '.rar', '.rpm', '.tar.gz', '.z', '.zip'],
