@@ -9,7 +9,7 @@ categories = {
     "Code": ['.js', '.jsp', '.html', '.ipynb', '.py', '.java', '.css'],
     "Documents": ['.ppt', '.pptx', '.pdf', '.xls', '.xlsx', '.doc', '.docx', '.txt', '.tex', '.epub'],
     "Images": ['.bmp', '.gif', '.ico', '.jpeg', '.jpg', '.png', '.jfif', '.svg', '.tif', '.tiff'],
-    "Software": ['.apk', '.bat', '.bin', '.exe', '.jar', '.msi', '.py', 'installer'],
+    "Software": ['.apk', '.bat', '.bin', '.exe', '.jar', '.msi', '.py'],
     "Videos": ['.3gp', '.avi', '.flv', '.h264', '.mkv', '.mov', '.mp4', '.mpg', '.mpeg', '.wmv'],
     "Other": []
 }
