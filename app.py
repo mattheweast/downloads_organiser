@@ -3,8 +3,9 @@
 # pylint: disable=missing-function-docstring
 
 import os
-from pathlib import Path
 import shutil
+from pathlib import Path
+
 
 # File types categorised by extensions
 categories = {
