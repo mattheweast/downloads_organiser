@@ -1,11 +1,77 @@
-body {
-    font-family: Arial
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header {
-    background-color: #f4d9ac;
-    text-align: center;
-    padding: 20px;
-  }
+/* Apply full viewport height and center the content */
+body, html {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+}
 
-  
+/* Center container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style for the header */
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Button styling */
+.btn {
+    background-color: #007BFF; /* Nice blue color */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.btn:active {
+    transform: translateY(0); /* Reset when clicking */
+}
+
+/* Responsive font size for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

@@ -15,6 +15,9 @@ def download_organiser():
         "Other": []
     }
 
+# Document type organisation
+
+
     # Assigning the root download folder
     home_dir = Path.home()
     download_root = home_dir / "Downloads"
@@ -37,4 +40,6 @@ def download_organiser():
             FILE_MOVED = False
 
             shutil.move(file_path, os.path.join(download_root, DESTINATION, file))
+
+    
 
