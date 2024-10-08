@@ -15,8 +15,6 @@ def download_organiser():
         "Other": []
     }
 
-# Document type organisation
-
 
     # Assigning the root download folder
     home_dir = Path.home()
