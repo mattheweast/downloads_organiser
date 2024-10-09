@@ -1,6 +1,5 @@
 import os
 import shutil
-import yaml
 from pathlib import Path
 
 categories = {
