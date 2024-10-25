@@ -5,7 +5,7 @@ import subprocess
 
 project_name = None
 
-def organise_screenshots():
+def organise_screenshots(project_name):
     desktop_folder = os.path.join(os.path.expanduser('~'), 'Desktop')
     screenshot_folder = os.path.join(os.path.expanduser('~'), 'Downloads', 'screenshots')
 
