@@ -1,7 +1,6 @@
 import os
 import shutil
 from datetime import datetime
-import subprocess
 
 project_name = None
 
