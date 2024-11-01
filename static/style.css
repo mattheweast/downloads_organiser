@@ -1,96 +1,141 @@
-/* Reset some default browser styling */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Apply full viewport height and center the content */
-body, html, h1 {
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f9;
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5; /* Light grey background */
+    color: #333; /* Dark grey text */
+    line-height: 1.6;
 }
 
-/* Parent container to stack heading above buttons */
-.parent-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Styling for heading container */
-.heading-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start; 
+/* Header Styles */
+.header {
     text-align: center;
-    grid-column-gap: 10px;
+    margin-bottom: 30px;
 }
 
-/* Styling for button container */
+.header h1 {
+    font-size: 2.5em;
+    color: #007BFF; /* Bright blue */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+/* Main Content Styles */
+.main-content {
+    margin: 20px 0;
+}
+
+/* Button Container */
 .button-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    grid-column-gap: 10px;
+    flex-direction: column;
+    gap: 20px; /* Space between forms */
 }
 
-/* Style for the header */
-h1 {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 2rem;
-    font-weight: bold;
+/* Action Form Styles */
+.action-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between input and button */
 }
 
-/* Button styling */
+/* Button Styles */
 .btn {
-    background-color: #007BFF; /* Nice blue color */
+    background: linear-gradient(to right, #007BFF, #0056b3); /* Gradient button */
     color: white;
+    padding: 15px 20px;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-3px); /* Lift effect on hover */
+    background: linear-gradient(to right, #0056b3, #003f7f); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
-.btn:active {
-    transform: translateY(0); /* Reset when clicking */
+/* Input Styles */
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%; /* Full width */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Inset shadow */
+    transition: border-color 0.3s;
 }
 
-/* Responsive font size for smaller screens */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .btn {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
+/* Input Focus Styles */
+input[type="text"]:focus {
+    border-color: #007BFF; /* Border color change on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
+/* Project Info Section */
+.project-info {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #ced4da; /* Top border for separation */
+    padding-top: 20px; /* Padding for top space */
+}
+
+.project-info h2 {
+    font-size: 1.5em;
+    color: #343a40; /* Darker grey */
+}
+
+/* Flash Messages */
+.flashes {
+    list-style-type: none;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.flashes .success {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+}
+
+.flashes .error {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    margin-top: 40px; /* Spacing above footer */
+    font-size: 0.9em;
+    color: #6c757d; /* Grey text for footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column; /* Stack on small screens */
     }
 
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+    .header h1 {
+        font-size: 2em; /* Smaller font for small screens */
     }
 }
