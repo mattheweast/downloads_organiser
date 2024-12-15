@@ -29,7 +29,7 @@ def set_project_name():
 
 @app.post("/screenshot")
 def screenshot():
-    project_name = session.get('project_name') 
+    project_name = session.get('project_name')  
     
     if project_name:
         screenshots.organise_screenshots(project_name)

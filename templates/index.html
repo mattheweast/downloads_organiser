@@ -8,53 +8,61 @@
     <title>Mac Organiser</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Mac Organiser &#9989;</h1>
-        </header>
+    <div class="grid-container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <header class="header">
+                <h1>Mac Organiser &#9989;</h1>
+            </header>
 
-        <main class="main-content">
-            <!-- Flash Messages -->
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    <ul class="flashes">
-                        {% for category, message in messages %}
-                            <li class="{{ category }}">{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endwith %}
-
-            <!-- Project Name Form -->
-            <section class="button-container">
-                <form action="/set_project_name" method="post" class="action-form">
-                    <label for="project_name">Set Project Name:</label>
-                    <input type="text" id="project_name" name="project_name" placeholder="Enter project name..." value="{{ project_name }}" aria-required="true">
-                    <button type="submit" class="btn">Save Project Name</button>
-                </form>
-                <div class="project-info">
-                    {% if project_name %}
-                        <h2>Current Project: {{ project_name }}</h2>
-                    {% else %}
-                        <h2>No Project Selected</h2>
+            <main class="main-content">
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <ul class="flashes">
+                            {% for category, message in messages %}
+                                <li class="{{ category }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
                     {% endif %}
-                </div>
-                <br>
-                <!-- Organise Screenshots Button -->
-                <form action="/screenshot" method="post" class="action-form">
-                    <button type="submit" class="btn">Organise Screenshots</button>
-                </form>
+                {% endwith %}
 
-                <!-- Organise Downloads Button -->
-                <form action="/organise" method="post" class="action-form">
-                    <button type="submit" class="btn">Organise Downloads</button>
-                </form>
-            </section>
-        </main>
+                <!-- Project Name Form -->
+                <section class="button-container">
+                    <form action="/set_project_name" method="post" class="action-form">
+                        <label for="project_name">Set Project Name:</label>
+                        <input type="text" id="project_name" name="project_name" placeholder="Enter project name..." value="{{ project_name }}" aria-required="true">
+                        <button type="submit" class="btn">Save Project Name</button>
+                    </form>
+                    <div class="project-info">
+                        {% if project_name %}
+                            <h2>Current Project: {{ project_name }}</h2>
+                        {% else %}
+                            <h2>No Project Selected</h2>
+                        {% endif %}
+                    </div>
+                    <br>
+                    <!-- Organise Screenshots Button -->
+                    <form action="/screenshot" method="post" class="action-form">
+                        <button type="submit" class="btn">Organise Screenshots</button>
+                    </form>
 
-        <footer class="footer">
-            <p>© 2024 Matt East. All rights reserved.</p>
-        </footer>
+                    <!-- Organise Downloads Button -->
+                    <form action="/organise" method="post" class="action-form">
+                        <button type="submit" class="btn">Organise Downloads</button>
+                    </form>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>© 2024 Matt East. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Blank section for future content -->
+        </div>
     </div>
 </body>
 </html>
